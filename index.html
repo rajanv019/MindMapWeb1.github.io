@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> MindMap </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+    <div>
+        <div class="brand"> Mind<span>Map</span></div>
+        <div class="tagline">
+            Plan better. Focus deeper. Feel better.
+        </div>
+    </div>
+
+    <div class="header-right">
+        <strong id="todayDate">Your Day, your pace</strong>
+        <span id="liveGreeting">Make today count </span>
+    </div>
+</header>
+
+<marquee>
+    <h1 class="greeting">HARDWORK IS THE KEY TO SUCCESS !</h1>
+</marquee>
+
+<main>
+
+    <section class="welcome">
+        <div>
+            <h1 id="greeting">Good Day, student! </h1>
+            <p>A little progress every day adds up to big results.</p>
+        </div>
+
+        <button class="secondary" onclick="resetToday()">
+             Reset today's tasks
+        </button>
+    </section>
+
+
+    <section class="stats">
+
+        <div class="stat">
+            <div class="label">Tasks completed</div>
+            <div class="number" id="completedCount">0/0</div>
+            <div class="hint">Keep moving forward</div>
+        </div>
+
+        <div class="stat">
+            <div class="label">Daily progress</div>
+            <div class="number" id="progressPercent">0%</div>
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+        </div>
+
+        <div class="stat">
+            <div class="label">Today's mood</div>
+            <div class="number" id="moodStat">—</div>
+            <div class="hint">Check in with yourself</div>
+        </div>
+
+    </section>
+
+    <section class="layout">
+
+        <div class="column">
+
+           
+            <div class="panel">
+
+                <div class="panel-head">
+                    <h2> My Daily Schedule</h2>
+                    <span class="sub">Plan your time</span>
+                </div>
+
+                <form id="scheduleForm">
+
+                    <input
+                        id="scheduleTitle"
+                        type="text"
+                        placeholder="Activity (e.g. Lecture, gym)"
+                        required
+                        maxlength="55">
+
+                    <input
+                        id="scheduleTime"
+                        type="time"
+                        required
+                        aria-label="Activity time">
+
+                    <button type="submit">Add</button>
+
+                </form>
+
+                <div class="list" id="scheduleList"></div>
+
+            </div>
+
+           
+            <div class="panel">
+
+                <div class="panel-head">
+                    <h2>Task Manager</h2>
+                    <span class="sub">One task at a time</span>
+                </div>
+
+                <form id="taskForm">
+
+                    <input
+                        id="taskTitle"
+                        type="text"
+                        placeholder="What do you need to do?"
+                        required
+                        maxlength="80">
+
+                    <select id="taskPriority">
+                        <option>Medium</option>
+                        <option>High</option>
+                        <option>Low</option>
+                    </select>
+
+                    <button type="submit">Add task</button>
+
+                </form>
+
+                <div class="list" id="taskList"></div>
+
+            </div>
+
+            <div class="panel">
+
+                <div class="panel-head">
+                    <h2>Daily Goal</h2>
+                    <span class="sub">Small steps matter</span>
+                </div>
+
+                <form id="goalForm">
+
+                    <input
+                        id="goalInput"
+                        type="text"
+                        placeholder="E.g. Study JavaScript for 1 hour"
+                        required
+                        maxlength="90">
+
+                    <button type="submit">Save goal</button>
+
+                </form>
+
+                <div id="goalDisplay" class="sub">
+                    You haven't set a goal yet. Add one above!
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="column">
+
+           
+            <div class="panel">
+
+                <div class="panel-head">
+                    <h2>Wellness Check-in</h2>
+                    <span class="sub">How are you feeling?</span>
+                </div>
+
+                <div class="moods" id="moodButtons">
+
+                    <button class="mood" data-mood="Great" type="button">
+                        😄<small>Great</small>
+                    </button>
+
+                    <button class="mood" data-mood="Good" type="button">
+                        🙂<small>Good</small>
+                    </button>
+
+                    <button class="mood" data-mood="Okay" type="button">
+                        😐<small>Okay</small>
+                    </button>
+
+                    <button class="mood" data-mood="Low" type="button">
+                        😔<small>Low</small>
+                    </button>
+
+                    <button class="mood" data-mood="Stressed" type="button">
+                        😣<small>Stressed</small>
+                    </button>
+
+                </div>
+
+                <p class="sub" id="moodMessage" aria-live="polite">
+                    Your feelings matter. Take a moment for yourself.
+                </p>
+
+            </div>
+
+            
+            <div class="panel">
+
+                <div class="panel-head">
+                    <h2>Daily Inspiration</h2>
+
+                    <button class="small secondary" id="newQuote">
+                        New quote
+                    </button>
+                </div>
+
+                <div class="quote" id="quoteText">
+                    “You don't have to be perfect. You just have to begin.”
+                </div>
+
+            </div>
+
+          
+            <div class="panel">
+
+                <div class="panel-head">
+                    <h2>A quick wellbeing reminder</h2>
+                </div>
+
+                <p class="sub">
+                    • Drink enough water throughout the day.<br><br>
+                    • Take short breaks between study sessions.<br><br>
+                    • Stretch and move your body.<br><br>
+                    • Make time for sleep, friends and hobbies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+  MindMap 
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
